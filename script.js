@@ -1,4 +1,5 @@
-function volume_sphere() {
+function volume_sphere(e) {
+	event.preventDefault();
     //Write your code here
 	// Step 1: Retrieve radius value
     let radius = parseInt(document.getElementById("radius").value);
@@ -19,11 +20,11 @@ function volume_sphere() {
     document.getElementById("volume").value = ans;
 }
 
-window.onload = document.getElementById('MyForm').onsubmit =
-	function(event) {
-        event.preventDefault(); // Prevent the form from submitting
-        volume_sphere(); // Call the function
-    };
+// window.onload = document.getElementById('MyForm').onsubmit =
+// 	function(event) {
+//         event.preventDefault(); // Prevent the form from submitting
+//         volume_sphere(); // Call the function
+//     };
 
 
 // function volume_sphere() {
@@ -31,4 +32,4 @@ window.onload = document.getElementById('MyForm').onsubmit =
   
 // } 
 
-// window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
+window.onload = document.getElementById('MyForm').onsubmit = volume_sphere;
